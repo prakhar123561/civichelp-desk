@@ -1,31 +1,30 @@
+import { CivicLayout } from "@/components/layout/civic-layout";
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-black">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center space-y-8 text-center">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Civichelp Desk
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-zinc-400">
-              WhatsApp case-tracker for citizen welfare and grievance services.
-            </p>
+    <CivicLayout>
+      <section className="grid gap-6 lg:grid-cols-3">
+        <article className="rounded-2xl border border-white/10 bg-white/5 p-6 lg:col-span-2">
+          <h2 className="text-2xl font-semibold">Welcome to Civichelp Desk</h2>
+          <p className="mt-3 text-zinc-300">
+            Manage citizen issues from WhatsApp intake to closure with a unified
+            desk for triage, assignment, and follow-up.
+          </p>
+          <div className="mt-6 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-sm text-emerald-200">
+            Active queue: 24 open cases · 7 pending SLA review · 3 escalations
           </div>
+        </article>
 
-          <div className="mt-10 w-full max-w-lg">
-            <div className="overflow-hidden rounded-2xl bg-white/[0.05] shadow-xl ring-1 ring-white/[0.1]">
-              <div className="p-8">
-                <p className="text-sm text-zinc-400">
-                  Start building your app by editing{" "}
-                  <code className="rounded bg-white/[0.1] px-2 py-1 text-sm text-white">
-                    src/app/page.tsx
-                  </code>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <aside className="space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 className="text-lg font-medium">Quick Actions</h3>
+          <ul className="space-y-2 text-sm text-zinc-300">
+            <li>• Create new case</li>
+            <li>• Assign field officer</li>
+            <li>• Send citizen update</li>
+            <li>• Export daily report</li>
+          </ul>
+        </aside>
+      </section>
+    </CivicLayout>
   );
 }
