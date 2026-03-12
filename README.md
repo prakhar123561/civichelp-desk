@@ -182,11 +182,24 @@ Install dependencies:
 npm install
 ```
 
-Start the server:
+Start the frontend (Next.js):
 
 ```bash
 npm start
 ```
+
+Run backend API server:
+
+```bash
+npm run backend:start
+```
+
+For auto-reload during development:
+
+```bash
+npm run backend:dev
+```
+
 
 ---
 
